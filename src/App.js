@@ -25,7 +25,7 @@ function App() {
                     <Route path="/update/:id" element={<AddEdit />} />
                     <Route path="/view/:id" element={<View />} />
                     <Route path="/about" element={<About />} />
-                    <Route path="/" element={<Connecter />} />
+                    <Route path="/firebase" element={<Connecter />} />
                     <Route path="/register" element={<Inscription />} />
                     <Route path="/tos" element={<Tos />} />
                 </Routes>
