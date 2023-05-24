@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/firebase/static/css/main.3dd1f008.css",
-    "main.js": "/firebase/static/js/main.bdd6401d.js",
+    "main.js": "/firebase/static/js/main.97af6403.js",
     "static/js/787.3cd18448.chunk.js": "/firebase/static/js/787.3cd18448.chunk.js",
     "index.html": "/firebase/index.html",
     "main.3dd1f008.css.map": "/firebase/static/css/main.3dd1f008.css.map",
-    "main.bdd6401d.js.map": "/firebase/static/js/main.bdd6401d.js.map",
+    "main.97af6403.js.map": "/firebase/static/js/main.97af6403.js.map",
     "787.3cd18448.chunk.js.map": "/firebase/static/js/787.3cd18448.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3dd1f008.css",
-    "static/js/main.bdd6401d.js"
+    "static/js/main.97af6403.js"
   ]
 }
