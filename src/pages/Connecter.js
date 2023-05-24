@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { Navigate, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 const Connecter = () => {
 
     const [erreur, setErreur]=useState();
@@ -43,11 +44,12 @@ const Connecter = () => {
                 <input type="checkbox" class="form-check-input" id="exampleCheck1" name='retenir'/>
                 <label class="form-check-label" for="exampleCheck1">Se souvenir de moi</label>
             </div>
-            <p>Pas de compte? <a href='https://liehn-noam.github.io/register' >S'inscrire</a></p>
             <input type="submit" class="btn btn-primary"/>
-        </form>
-        
-        
+        </form><br/>
+        <p>Pas encore inscrit?</p>
+        <Link to={`/register`}>
+                <button type='button' class="btn btn-secondary">S'inscrire</button>
+        </Link>
       </div>
     </div>
   )

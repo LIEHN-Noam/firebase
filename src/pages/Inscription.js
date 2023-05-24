@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { Link } from 'react-router-dom';
 import { Navigate, useNavigate } from 'react-router-dom';
 const Inscription = () => {
     const [erreur, setErreur]=useState();
@@ -41,10 +42,12 @@ const Inscription = () => {
                 <input type="checkbox" class="form-check-input" id="exampleCheck1" name='retenir'/>
                 <label class="form-check-label" for="exampleCheck1">Je suis d'accord avec les <a href='/tos'>termes de service</a></label>
             </div>
-            <p>Déjà inscrit?  <a href='https://liehn-noam.github.io/firebase/'>Se connecter</a></p>
             <button type="submit" class="btn btn-primary">Inscription</button>
-        </form>
-        
+        </form><br/>
+        <p>Vous avez déjà un compte?</p>
+        <Link to={`/firebase`}>
+                <button type='button' class="btn btn-secondary">Se connecter</button>
+        </Link>
       </div>
     </div>
   )
