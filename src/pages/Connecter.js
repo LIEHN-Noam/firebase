@@ -43,7 +43,7 @@ const Connecter = () => {
                 <input type="checkbox" class="form-check-input" id="exampleCheck1" name='retenir'/>
                 <label class="form-check-label" for="exampleCheck1">Se souvenir de moi</label>
             </div>
-            <p>Pas de compte? <a href='/register' >S'inscrire</a></p>
+            <p>Pas de compte? <a href='https://liehn-noam.github.io/register' >S'inscrire</a></p>
             <input type="submit" class="btn btn-primary"/>
         </form>
         
