@@ -38,10 +38,6 @@ const Inscription = () => {
                 <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
                 <input type="password" class="form-control" id="exampleInputPassword1" name='password' onChange={(e)=>setPassword(e.target.value)} />
             </div>
-            <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1" name='retenir'/>
-                <label class="form-check-label" for="exampleCheck1">Je suis d'accord avec les <a href='/tos'>termes de service</a></label>
-            </div>
             <button type="submit" class="btn btn-primary">Inscription</button>
         </form><br/>
         <p>Vous avez déjà un compte?</p>

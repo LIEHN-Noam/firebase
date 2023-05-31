@@ -10,8 +10,8 @@ const Home = () => {
     const navigate = useNavigate();
     const{id}=useParams();
     useEffect(()=>{
-        const contactsCollection=ref(fireDb,"contacts");
-        onValue(contactsCollection,(snapshot)=>{
+        const objetsCollection=ref(fireDb,"objets");
+        onValue(objetsCollection,(snapshot)=>{
             if(snapshot.exists()){
                 setData(snapshot.val())
             }else{
@@ -22,10 +22,10 @@ const Home = () => {
             }
         })
     })
-    const supprimerContacts=(id)=>{
+    const supprimerObjet=(id)=>{
         if(window.confirm("Êtes vous sur de vouloir supprimer ?")){
-            const contactsSelectionner=ref(fireDb,`contacts/${id}`)
-            remove(contactsSelectionner,(err)=>{
+            const objetsSelectionner=ref(fireDb,`objets/${id}`)
+            remove(objetsSelectionner,(err)=>{
                 if(err){
                     toast.error(err)
                 }else{
@@ -38,13 +38,13 @@ const Home = () => {
     return (
         <>
             <div> 
-            <table class="table table-striped table-dark">
+            <table class="table table-striped table-info">
   <thead>
     <tr>
       <th scope="col">No.</th>
-      <th scope="col">Nom</th>
-      <th scope="col">Email</th>
-      <th scope="col">Conatct</th>
+      <th scope="col">Objet</th>
+      <th scope="col">Prix</th>
+      <th scope="col">Vendeur</th>
       <th scope="col">Action</th> 
     </tr>
   </thead>
@@ -52,10 +52,10 @@ const Home = () => {
     {Object.keys(collections).map((id,index)=>{
         return (
             <tr key={id}>
-            <th scope="row">{index+1}</th>
+            <th scope="row">{index+2}</th>
             <td >{collections[id].name}</td>
-            <td>{collections[id].email}</td>
-            <td>{collections[id].contact}</td>
+            <td>{collections[id].price}</td>
+            <td>{collections[id].seller}</td>
             <td><Link to={`/view/${id}`}>
                 <button type='button' class="btn btn-secondary">Voir</button>
                 </Link>&nbsp;
@@ -63,7 +63,7 @@ const Home = () => {
                 <button type='button' class="btn btn-warning">Editer</button>
                 </Link>&nbsp;
                 <Link to={`/accueil`}>
-                <button type='button' class="btn btn-danger" onClick={()=>supprimerContacts(id)}>Supprimer</button>
+                <button type='button' class="btn btn-danger" onClick={()=>supprimerObjet(id)}>Supprimer</button>
                 </Link>&nbsp;
             </td>
           </tr>

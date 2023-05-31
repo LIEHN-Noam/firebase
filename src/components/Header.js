@@ -6,20 +6,18 @@ const Header = () => {
     const location = useLocation();
 
     useEffect(() => {
-        if(location.pathname ==="/"){
-            setActiveTab("Home")
-        }else if(location.pathname === "/add"){
-            setActiveTab("AddContact");
-        }else if(location.pathname === "/about"){
-            setActiveTab("About");
+        if(location.pathname ==="/login"){
+            setActiveTab("Login")
+        }else if(location.pathname === "/register"){
+            setActiveTab("Register");
         }
     },[location]);
 
   return (
         <div className='header'>
-            <p className='logo'>Ifran App</p>
+            <p className='logo'>IFRAN e-commerce</p>
             <div className='header-right'>
-                <Link to="/accueil">
+                 <Link to="/accueil">
                     <p 
                      className={`${activeTab === "Home" ? "active":""}`}
                      onClick={()=> setActiveTab("Home")} 
@@ -27,20 +25,28 @@ const Header = () => {
                             Accueil
                     </p>
                 </Link>
-                <Link to="/add">
+                <Link to="/login">
                     <p 
-                     className={`${activeTab === "AddContact" ? "active":""}`}
-                     onClick={()=> setActiveTab("AddContact")} 
+                     className={`${activeTab === "Login" ? "active":""}`}
+                     onClick={()=> setActiveTab("Login")} 
                     >
-                           Ajouter un contact
+                            Se connecter
                     </p>
                 </Link>
-                <Link to="/about">
+                <Link to="/register">
                     <p 
-                     className={`${activeTab === "About" ? "active":""}`}
-                     onClick={()=> setActiveTab("About")} 
+                     className={`${activeTab === "Register" ? "active":""}`}
+                     onClick={()=> setActiveTab("Register")} 
                     >
-                           A Propos
+                           S'inscrire
+                    </p>
+                </Link>
+                <Link to="/add">
+                    <p 
+                     className={`${activeTab === "Add" ? "active":""}`}
+                     onClick={()=> setActiveTab("Add")} 
+                    >
+                           Ajouter un objet
                     </p>
                 </Link>
             </div>

@@ -4,14 +4,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import AddEdit from './pages/AddEdit';
 import Home from './pages/Home';
 import View from './pages/View';
-import About from './pages/About';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 import Header from './components/Header';
 import Connecter from './pages/Connecter';
 import Inscription from './pages/Inscription';
-import Tos from './pages/Tos';
+import Init from './pages/Init'
 
 function App() {
     return (
@@ -24,10 +23,9 @@ function App() {
                     <Route path="/add" element={<AddEdit />} />
                     <Route path="/update/:id" element={<AddEdit />} />
                     <Route path="/view/:id" element={<View />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/firebase" element={<Connecter />} />
+                    <Route path="/ecom" element={<Init />} />
+                    <Route path="/login" element={<Connecter />} />
                     <Route path="/register" element={<Inscription />} />
-                    <Route path="/tos" element={<Tos />} />
                 </Routes>
             </div>
         </>

@@ -1,36 +1,37 @@
 .header {
     overflow:hidden;
-    background-color:#5d6770;
+    background-color:#003767;
 }
 
 .header p {
     float:left;
-    color: rgb(255, 255, 255);
+    color: rgb(122, 0, 0);
     text-align:center;
     padding: 10px;
     text-decoration:none;
     font-size:18px;
     line-height: 15px;
-    border-radius:5px;
-    background-color: rgb(150, 116, 92);
+    border: 1px solid black;
+    background-color: rgba(116, 116, 116, 0.777);
 }
 
 .header p.logo{
     font-size:25px;
     font-weight: bold;
-    color: #0e4097;
+    color: rgb(122, 0, 0);
     padding: 5px;
 }
 
 .header p:hover {
-    background-color: #856d6d;
-    color:#5d6770;
+    background-color: #ffffff;
+    color:#003869;
 
 }
 
 .header p.active {
-    background-color: dodgerblue;
-    color:white;
+    background-color: goldenrod;
+    color:rgb(122, 0, 0);
+    border: solid 1px #ffffff;
 
 }
 
